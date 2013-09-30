@@ -1,0 +1,22 @@
+[user]
+	name = Ben Lewis
+	email = bennlewis@gmail.com
+[credential]
+	helper = osxkeychain
+[alias]
+   st = status
+   ci = commit
+   br = branch
+   co = checkout
+   df = diff
+   dc = diff --cached
+   hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
+   lol = log --graph --decorate --pretty=oneline --abbrev-commit
+   lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
+   ls = ls-files
+   cb = checkout -b
+
+   # Show files ignored by git:
+   ign = ls-files -o -i --exclude-standard
+[core]
+	excludesfile = /Users/benlewis/.gitignore
