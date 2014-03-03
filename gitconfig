@@ -8,13 +8,16 @@
    ci = commit
    br = branch
    co = checkout
+   cob = checkout -b
    df = diff
    dc = diff --cached
    hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
    lol = log --graph --decorate --pretty=oneline --abbrev-commit
    lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
    ls = ls-files
-   cb = checkout -b
+   aa = add -A
+   cm = commit -m
+   bra = branch -a
 
    # Show files ignored by git:
    ign = ls-files -o -i --exclude-standard
