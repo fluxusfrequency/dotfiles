@@ -8,14 +8,14 @@ export PS1="\[\033[33;1m\]\W\[\033[32m\]\$(parse_git_branch)\[\033[00m\] $ "
 #Display ruby version with rvm.
 PS1="\$(~/.rvm/bin/rvm-prompt) $PS1"
 
-export EDITOR='/Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl -w'
+export EDITOR='/usr/local/bin/atom'
 
 if [ -f ~/.bashrc ]; then
   source ~/.bashrc
 fi
 
 # ALIASES
-alias ls='ls -aGFl'
+alias ll='ls -aGFl'
 alias lm='ls | more'
 
 alias cd..='cd ..'
@@ -34,8 +34,8 @@ alias gh="git hist"
 
 alias code='pushd ~/Dropbox/Code'
 alias cp='cp -i'
-alias e='/Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl $1'
-alias e.='/Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl .'
+alias e='/usr/local/bin/atom $1'
+alias e.='/usr/local/bin/atom .'
 alias ebp='e ~/.bash_profile'
 alias reload='source ~/.bash_profile'
 
@@ -57,12 +57,3 @@ parse_git_branch() {
 
 # Old command line without parse git branch
 #export PS1="\[\033[33;1m\]\W\[\033[m\]\[\033[32m\]\$ "
-
-##
-# Your previous /Users/benlewis/.bash_profile file was backed up as /Users/benlewis/.bash_profile.macports-saved_2013-11-26_at_11:11:50
-##
-
-# MacPorts Installer addition on 2013-11-26_at_11:11:50: adding an appropriate PATH variable for use with MacPorts.
-export PATH=/opt/local/bin:/opt/local/sbin:$PATH
-# Finished adapting your PATH environment variable for use with MacPorts.
-
