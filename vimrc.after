@@ -1,0 +1,39 @@
+set t_Co=256
+colorscheme Tomorrow-Night-Bright
+set noswapfile
+
+:imap jj <Esc>
+set colorcolumn=80
+set autowrite
+set ttyfast
+
+set tabstop=2
+set shiftwidth=2
+set softtabstop=2
+set expandtab
+
+set showcmd
+
+set smartindent
+set autoindent
+
+set wrap
+set textwidth=80
+set formatoptions=qrn1
+
+"Set incremental searching
+set incsearch
+
+""Highlight searching
+set hlsearch
+
+"case insensitive search
+set ignorecase
+set smartcase
+
+nmap <C-h> <C-w>h
+nmap <C-j> <C-w>j
+nmap <C-k> <C-w>k
+nmap <C-l> <C-w>l
+
+let NERDTreeShowHidden=1
