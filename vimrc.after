@@ -3,6 +3,9 @@ colorscheme Tomorrow-Night-Bright
 set noswapfile
 
 :imap jj <Esc>
+
+:set mouse=a
+
 set colorcolumn=80
 set autowrite
 set ttyfast
@@ -16,6 +19,7 @@ set showcmd
 
 set smartindent
 set autoindent
+set clipboard=unnamed
 
 set wrap
 set textwidth=80
@@ -37,3 +41,4 @@ nmap <C-k> <C-w>k
 nmap <C-l> <C-w>l
 
 let NERDTreeShowHidden=1
+
