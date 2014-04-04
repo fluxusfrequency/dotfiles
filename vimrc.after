@@ -47,3 +47,8 @@ nnoremap <leader>s <C-w>s<C-w><C-w>
 
 let NERDTreeShowHidden=1
 autocmd BufWritePre * :%s/\s\+$//e
+
+"Disable syntastic for html so it won't complain about angular directives
+let g:syntastic_html_checkers=[]
+
+set whichwrap+=<,>,h,l,[,]
