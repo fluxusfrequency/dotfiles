@@ -40,5 +40,8 @@ nmap <C-j> <C-w>j
 nmap <C-k> <C-w>k
 nmap <C-l> <C-w>l
 
-let NERDTreeShowHidden=1
+nnoremap <leader>v <C-w>v<C-w><C-w>
+nnoremap <leader>s <C-w>s<C-w><C-w>
 
+let NERDTreeShowHidden=1
+autocmd BufWritePre * :%s/\s\+$//e
