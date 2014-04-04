@@ -2,6 +2,8 @@ set t_Co=256
 colorscheme Tomorrow-Night-Bright
 set noswapfile
 
+let mapleader = ","
+
 :imap jj <Esc>
 
 :set mouse=a
