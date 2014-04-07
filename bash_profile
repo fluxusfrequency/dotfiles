@@ -8,7 +8,7 @@ export PS1="\[\033[33;1m\]\W\[\033[32m\]\$(parse_git_branch)\[\033[00m\] $ "
 #Display ruby version with rvm.
 PS1="\$(~/.rvm/bin/rvm-prompt) $PS1"
 
-export EDITOR='/usr/local/bin/atom'
+export EDITOR='/usr/bin/vim'
 
 if [ -f ~/.bashrc ]; then
   source ~/.bashrc
@@ -22,10 +22,11 @@ alias cd..='cd ..'
 alias be='bundle exec'
 
 alias push='git push origin master'
-alias pull='git pull --rebase origin master'
+alias pull='git pull'
 alias master='git checkout master'
 alias gmm='git merge master'
 alias gcb='git checkout -b'
+alias gco='git checkout'
 alias gcm='git commit -m'
 alias gaa='git add -A'
 alias gs="git status"
@@ -34,13 +35,14 @@ alias gh="git hist"
 
 alias code='pushd ~/Dropbox/Code'
 alias cp='cp -i'
-alias e='/usr/local/bin/atom $1'
-alias e.='/usr/local/bin/atom .'
+alias e='/usr/bin/vim $1'
+alias e.='/usr/bin/vim .'
 alias ebp='e ~/.bash_profile'
 alias reload='source ~/.bash_profile'
 
 alias jn='jasmine-node --color --verbose --forceexit'
 alias exercise='cd ~/Dropbox/Code/exercism'
+alias epson="cd ~/Dropbox/code/ql/epson-receipts"
 
 # Source git tab completion library
 source /usr/local/etc/bash_completion.d/git-completion.bash
