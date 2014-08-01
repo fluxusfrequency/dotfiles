@@ -8,14 +8,14 @@ export PS1="\[\033[33;1m\]\W\[\033[32m\]\$(parse_git_branch)\[\033[00m\] $ "
 #Display ruby version with rvm.
 PS1="\$(~/.rvm/bin/rvm-prompt) $PS1"
 
-export EDITOR='/usr/bin/vim'
+export EDITOR='/usr/local/bin/mvim'
 
 if [ -f ~/.bashrc ]; then
   source ~/.bashrc
 fi
 
 # ALIASES
-alias ll='ls -aGFl'
+alias ls='ls -aGFl'
 alias lm='ls | more'
 
 alias cd..='cd ..'
@@ -35,8 +35,8 @@ alias gh="git hist"
 
 alias code='pushd ~/Dropbox/Code'
 alias cp='cp -i'
-alias e='/usr/bin/vim $1'
-alias e.='/usr/bin/vim .'
+alias e='mvim $1'
+alias e.='e .'
 alias ebp='e ~/.bash_profile'
 alias reload='source ~/.bash_profile'
 
@@ -56,6 +56,6 @@ export PATH="/usr/local/bin:/usr/local/sbin:~/bin:$PATH"
 parse_git_branch() {
     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
 }
-
 # Old command line without parse git branch
 #export PS1="\[\033[33;1m\]\W\[\033[m\]\[\033[32m\]\$ "
+export BASTION_USER="blewis"
