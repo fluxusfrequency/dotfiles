@@ -1,5 +1,6 @@
 set t_Co=256
-colorscheme Tomorrow-Night-Bright
+colorscheme Tomorrow-Night-Eighties
+set guifont=Menlo:h11
 set noswapfile
 
 let mapleader = ","
@@ -52,3 +53,5 @@ autocmd BufWritePre * :%s/\s\+$//e
 let g:syntastic_html_checkers=[]
 
 set whichwrap+=<,>,h,l,[,]
+
+"setlocal balloonexpr=
