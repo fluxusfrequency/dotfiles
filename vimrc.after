@@ -1,13 +1,11 @@
+set guifont=Menlo:h12
 set t_Co=256
-colorscheme Tomorrow-Night-Eighties
 set guifont=Menlo:h11
 set noswapfile
 
 let mapleader = ","
 
 :imap jj <Esc>
-
-:set mouse=a
 
 set colorcolumn=80
 set autowrite
@@ -46,6 +44,7 @@ nmap <C-l> <C-w>l
 nnoremap <leader>v <C-w>v<C-w><C-w>
 nnoremap <leader>s <C-w>s<C-w><C-w>
 
+nnoremap <C-n> :set hlsearch!<CR>
 let NERDTreeShowHidden=1
 autocmd BufWritePre * :%s/\s\+$//e
 
@@ -54,4 +53,3 @@ let g:syntastic_html_checkers=[]
 
 set whichwrap+=<,>,h,l,[,]
 
-"setlocal balloonexpr=
