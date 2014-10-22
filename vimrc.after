@@ -52,5 +52,3 @@ let g:syntastic_html_checkers=[]
 
 set whichwrap+=<,>,h,l,[,]
 
-hi SpellBad ctermfg=229 ctermbg=004 guifg=#99cc99 guibg=#000080
-hi SpellCap ctermfg=229 ctermbg=004 guifg=#99cc99 guibg=#000080
