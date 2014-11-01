@@ -5,9 +5,6 @@ export PATH=/usr/local/share/npm/bin:$PATH
 export PATH=$PATH:~/bin
 export PS1="\[\033[33;1m\]\W\[\033[32m\]\$(parse_git_branch)\[\033[00m\] $ "
 
-#Display ruby version with rvm.
-PS1="\$(~/.rvm/bin/rvm-prompt) $PS1"
-
 export EDITOR='/usr/local/bin/mvim'
 
 if [ -f ~/.bashrc ]; then
@@ -33,7 +30,7 @@ alias gs="git status"
 alias gb="git branch"
 alias gh="git hist"
 
-alias code='pushd ~/Dropbox/Code'
+alias code='cd ~/code'
 alias cp='cp -i'
 alias e='mvim $1'
 alias e.='e .'
@@ -41,16 +38,10 @@ alias ebp='e ~/.bash_profile'
 alias reload='source ~/.bash_profile'
 
 alias jn='jasmine-node --color --verbose --forceexit'
-alias exercise='cd ~/Dropbox/Code/exercism'
-alias epson="cd ~/Dropbox/code/ql/epson-receipts"
+alias exercise='cd ~/code/exercism'
 
 # Source git tab completion library
 source /usr/local/etc/bash_completion.d/git-completion.bash
-
-# RVM
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
-export PATH="/usr/local/bin:/usr/local/sbin:~/bin:$PATH"
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM function
 
 # Git branch in prompt.
 parse_git_branch() {
@@ -59,3 +50,6 @@ parse_git_branch() {
 # Old command line without parse git branch
 #export PS1="\[\033[33;1m\]\W\[\033[m\]\[\033[32m\]\$ "
 export BASTION_USER="blewis"
+
+export RBENV_ROOT=/usr/local/var/rbenv
+if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
