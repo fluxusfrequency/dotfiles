@@ -1,10 +1,11 @@
-set guifont=Menlo:h14
+set guifont=Menlo:h16
 set t_Co=256
 set noswapfile
 
 let mapleader = ","
 
 :imap jj <Esc>
+:imap jk <Esc>
 
 set colorcolumn=100
 set autowrite
@@ -22,7 +23,8 @@ set autoindent
 set clipboard=unnamed
 
 set wrap
-set textwidth=80
+set textwidth=100
+set wrapmargin=100
 set formatoptions=qrn1
 
 "Set incremental searching
@@ -47,8 +49,17 @@ nnoremap <C-n> :set hlsearch!<CR>
 let NERDTreeShowHidden=1
 autocmd BufWritePre * :%s/\s\+$//e
 
-"Disable syntastic for html so it won't complain about angular directives
-let g:syntastic_html_checkers=[]
-
 set whichwrap+=<,>,h,l,[,]
 
+" Syntax highlighting for ejs files
+au BufNewFile,BufRead *.ejs set filetype=html
+
+hi SpellBad ctermfg=229 ctermbg=004 guifg=#99cc99 guibg=#000080
+hi SpellCap ctermfg=229 ctermbg=004 guifg=#99cc99 guibg=#000080
+
+let g:syntastic_scss_checkers = []
+let g:syntastic_javascript_checkers = ['jsxhint']
+
+command Blog execute "set textwidth=0 | set wrapmargin=0"
+
+let g:ctrlp_max_files=100000
