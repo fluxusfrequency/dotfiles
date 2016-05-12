@@ -1,0 +1,21 @@
+# Apps I Want
+
+- MacVim
+- Janus
+- spotify
+- Homebrew
+- git
+- rbenv
+- ruby build
+- openssl
+- heroku toolbelt
+- node
+- postgres
+- redis
+- exercism
+- 1password
+- dropbox
+- divvy
+- screenhero
+- slack
+- processing
