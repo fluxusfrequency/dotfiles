@@ -59,6 +59,8 @@ hi SpellCap ctermfg=229 ctermbg=004 guifg=#99cc99 guibg=#000080
 
 let g:syntastic_scss_checkers = []
 let g:syntastic_javascript_checkers = ['jsxhint']
+unlet g:ctrlp_custom_ignore
+let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
 
 command Blog execute "set textwidth=0 | set wrapmargin=0"
 

@@ -6,6 +6,7 @@ export PATH=$PATH:~/bin
 export PS1="\[\033[33;1m\]\W\[\033[32m\]\$(parse_git_branch)\[\033[00m\] $ "
 
 export EDITOR='/usr/local/bin/mvim -f'
+export HISTCONTROL=ignoreboth:erasedups
 
 if [ -f ~/.bashrc ]; then
   source ~/.bashrc
@@ -38,6 +39,7 @@ alias e='mvim $1'
 alias e.='e .'
 alias ebp='e ~/.bash_profile'
 alias reload='source ~/.bash_profile'
+alias rb='bower cache clean && rm -rf vendor/assets/bower_components && bower install && gulp bower build'
 
 alias jn='jasmine-node --color --verbose --forceexit'
 alias exercise='cd ~/Code/exercism'
@@ -50,7 +52,17 @@ echo "--------------------------------"
 ps aux | grep ruby | awk '{print $2}' | xargs kill -9
 }
 
+function killGulp() {
+echo "Killing these processes:"
+echo "--------------------------------"
+ps aux | grep gulp
+echo "--------------------------------"
+ps aux | grep gulp | awk '{print $2}' | xargs kill -9
+
+}
+
 alias killruby=killRuby
+alias killgulp=killGulp
 
 # Source git tab completion library
 source /usr/local/etc/bash_completion.d/git-completion.bash
@@ -62,19 +74,8 @@ parse_git_branch() {
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 
-# Android config
-export PATH=$PATH:/usr/local/Cellar/android-sdk
-export PATH=$PATH:/usr/local/Cellar/android-sdk/24.0.2/bin
-export ANDROID_HOME=/usr/local/Cellar/android-sdk/24.0.2
-export JAVA_HOME=/usr
-
-
 export HISTCONTROL=ignoredups
 export PATH="/usr/local/sbin:$PATH"
-    export DOCKER_HOST=tcp://192.168.59.103:2376
-    export DOCKER_CERT_PATH=/Users/benlewis/.boot2docker/certs/boot2docker-vm
-    export DOCKER_TLS_VERIFY=1
-export BF_PLATFORM_INTERCEPT_EMAIL="blewis+localintercept@tapinfluence..com"
 
 export NVM_DIR=~/.nvm
 source $(brew --prefix nvm)/nvm.sh
