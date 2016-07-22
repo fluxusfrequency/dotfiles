@@ -59,6 +59,7 @@ hi SpellCap ctermfg=229 ctermbg=004 guifg=#99cc99 guibg=#000080
 
 let g:syntastic_scss_checkers = []
 let g:syntastic_javascript_checkers = ['jsxhint']
+let g:syntastic_javascript_jsxhint_exec = 'jsx-jshint-wrapper'
 unlet g:ctrlp_custom_ignore
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
 

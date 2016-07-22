@@ -40,6 +40,7 @@ alias e.='e .'
 alias ebp='e ~/.bash_profile'
 alias reload='source ~/.bash_profile'
 alias rb='bower cache clean && rm -rf vendor/assets/bower_components && bower install && gulp bower build'
+alias fixnpm='rm -rf node_modules && npm cache clean && npm i'
 
 alias jn='jasmine-node --color --verbose --forceexit'
 alias exercise='cd ~/Code/exercism'
@@ -79,3 +80,5 @@ export PATH="/usr/local/sbin:$PATH"
 
 export NVM_DIR=~/.nvm
 source $(brew --prefix nvm)/nvm.sh
+
+export PATH="$PATH:/Applications/DevDesktop/drush"
